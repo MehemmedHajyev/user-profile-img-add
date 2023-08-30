@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #dfdfdf;
+            display: block;
+            margin: 10px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <div> <img src="" alt="">
+            <input type="file">
+        </div>
+    </div>
+    <script>
+        const image = document.querySelector('img')
+        input = document.querySelector('input')
+        input.addEventListener('change', () => {
+            image.src = URL.createObjectURL(input.files[0])
+        })
+    </script>
+</body>
+
+</html>
